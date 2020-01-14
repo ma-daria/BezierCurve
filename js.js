@@ -1,8 +1,13 @@
 let canvas = document.querySelector("canvas");
 let context = canvas.getContext("2d");
 
-canvas.height = window.innerHeight;
-canvas.width = window.innerWidth;
+canvas.height = document.documentElement.clientHeight-20;
+canvas.width = document.documentElement.clientWidth-10;
+console.log(document.documentElement.clientHeight);
+console.log(window.innerHeight);
+
+context.fillText("Для отрисовки необходимо кликнуть по экрану в 2х местах", 10, 10);
+context.stroke();
 
 let P1 = [0, 0];
 let P2 = [0, 0];
